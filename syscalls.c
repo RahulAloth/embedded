@@ -78,6 +78,8 @@ This loop waits until the FIFO (First In, First Out) buffer of stimulus port 0 i
 It checks the 0th bit of the ITM Stimulus Port 0 Register (ITM_STIMULUS_PORT0) to see if it’s set, indicating the port is ready.
 
 */
+
+/*   Implimentation of Printf feature  in ARM Cortex M3     start: */
 //Debug Exception and Monitor Control Register base address
 #define DEMCR        			*((volatile uint32_t*) 0xE000EDFCU )
 
@@ -102,6 +104,7 @@ void ITM_SendChar(uint8_t ch)
     ITM_STIMULUS_PORT0 = ch;
 }
 
+/*   Implimentation of Printf feature  in ARM Cortex M3     : End */
 int _write(int file, char* ptr, int len) {
     for (int i = 0; i < len; i++) {
         ITM_SendChar(*ptr++);
