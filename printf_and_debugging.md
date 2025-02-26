@@ -31,3 +31,6 @@ The Serial Wire Viewer (SWV) can be used for `printf` statements, which is usefu
 - **ARM Cortex-M4 Processor**: Features ITM unit for `printf` and diagnostics.
 - **SWD Interface**: Two-wire protocol for debugging, alternative to JTAG.
 - **SWV for `printf`**: Enables debugging with `printf` statements, supported from ARM Cortex-M3 onwards.
+
+
+Implimentation of this feature can be found in syscalls.c file.
